@@ -1,0 +1,107 @@
+# ATM PROJECT
+# User story scenario
+# 2. The bank has users using ATM cards
+        # a. Expiration dates
+        # b. Account numbers (to be added to the users' dictionaries)
+# 3. Users’ information is stored in the bank database
+        # a. Name
+        # b. PIN
+        # c. Balance
+        # d. Currency
+            # i. Kenyan Shillings
+            # ii. USD
+        # f. Account number
+# 4. Users are requested to insert their ATM cards
+    # a. Login
+        # i. prompted with a welcoming message
+        # ii. PIN request
+              If the PIN is correct,
+                proceed to the program
+              If the PIN is not correct,
+                prompt a message telling that the PIN is not correct and ask the user to try again
+              If the number of trials reaches 3,
+                prompt a message alerting the blocking of the card
+              If the PIN digits is more or less than 4,
+                prompt a message requesting to insert a PIN with 4 digits
+# 5. The system recognizes the successful login of the user
+        # a. Introducing the available transactions
+            Request the user to enter the number corresponding to the needed transaction.
+            # 1- Bank account statement
+                    Print the bank statement on the screen
+                    Ask if the user wants statement report? (Y/N),
+                        Y: Print out the statement report and display a thanking message
+                        N: Ask if user wants to continue (Y/N),
+                            Y: Prompt back to the list of transactions' options
+                            N: Ask the user if they are sure to quit the program (Y/N),
+                                Y: Quit the program display a thanking message
+                                    Remind user to take back their card
+                                N: Prompt back to the list of transactions' options
+            # 2- Check the balance
+                    Print the updated account balance
+                    Ask if user wants to continue (Y/N),
+                        Y: Prompt back to the list of transactions' options
+                        N: Ask the user if they are sure to quit the program (Y/N),
+                           Y: Quit the program and display a thanking message
+                                Remind user to take back their card
+                           N: Prompt back to the list of transactions' options
+            # 3- Withdraw
+                    Ask the user to select the amount,
+                    Provide with the range of the values to select for withdrawal
+                        1- 500
+                        2- 1000
+                        3- 5000
+                        4- 10000
+                        5- 50000
+                        6- 100000
+                        7- 200000
+                        8- OTHER
+                            If the user enters the amount <= account balance
+                                Successful withdrawal
+                                Print the updated account balance
+                                Ask the user if they want the bank slip (Y/N),
+                                    Y: Print the bank slip and display a thanking message
+                                        Ask the user if they want to continue (Y/N),
+                                            Y: Prompt back to the list of transactions' options
+                                            N: Ask the user if they are sure to quit the program (Y/N),
+                                                Y: Quit the program and display a thanking message
+                                                    Remind user to take back their card
+                                                N: Prompt back to the list of transactions' options
+                            If the user enters the amount > account balance
+                                Print the error message ("Insufficient balance")
+                                Ask the user if they want to continue (Y/N),
+                                    Y: Prompt back to the list of transactions' options
+                                    N: Ask the user if they are sure to quit the program (Y/N),
+                                        Y: Quit the program and display a thanking message
+                                            Remind user to take back their card
+                                        N: Prompt back to the list of transactions' options
+                            If the user enters the amount > withdraw_limit
+                                print the error message ("Maximum amount exceeded!"),
+                                Ask the user if they want to continue (Y/N),
+                                    Y: Prompt back to the list of transactions' options
+                                    N: Ask the user if they are sure to quit the program (Y/N),
+                                        Y: Quit the program and display a thanking message
+                                            Remind user to take back their card
+                                        N: Prompt back to the list of transactions' options
+            # 4- Deposit
+                    Print('Start inserting your bank notes...')
+                    Print('You deposited {amount_deposited} {currency} on your account')
+                    Print the updated account balance
+                    Ask the user if they want the bank slip (Y/N),
+                                    Y: Print the bank slip and display a thanking message
+                                        Ask the user if they want to continue (Y/N),
+                                            Y: Prompt back to the list of transactions' options
+                                            N: Ask the user if they are sure to quit the program (Y/N),
+                                                Y: Quit the program and display a thanking message
+                                                    Remind user to take back their card
+                                                N: Prompt back to the list of transactions' options
+            # 5- Quit
+                    Ask the user if they are sure to quit the program (Y/N),
+                        Y: Quit the program and display a thanking message
+                            Remind user to take back their card
+                        N: Prompt back to the list of transactions' options
+# 6. The user should know exactly what to do to get some form of response
+        # a. Options are given to the user after every operation/transaction
+            # i. Questions like, “Do you want to continue?” (Y/N)
+        # b. Farewell/thanking message to the user
+# 7. The program should be self-executing.
+        # a. Execute/Running Python scripts
