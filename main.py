@@ -1,18 +1,29 @@
 # https://prod.liveshare.vsengsaas.visualstudio.com/join?9078EC5AC58CE701C5D48767145EB0C5406C
 
+import users
+
+
+# Opening a file from other dict
+file = open("users.py", "r")
+contents = file.read()
+file.close()
+
 # Welcoming message
 welcoming_note = """
-                    WELCOME TO SIGMABANK!
-                    
-                    WHERE FINANCIAL FREEDOM BEGINS!
-                    
-                    PLEASE, INSERT YOUR CARD...
-                    
+WELCOME TO SIGMABANK!
+
+WHERE FINANCIAL FREEDOM BEGINS!
+
+PLEASE, INSERT YOUR CARD...
+
 """
 print(welcoming_note)
 
 # User inserts the card and requested to enter the PIN
-userPIN = 1234
+userPIN = users.user1["PIN"]
+
+print(userPIN)
+
 # Number of trials for loging in
 Trials = 3
 #Limiting the trials
